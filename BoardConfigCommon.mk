@@ -38,7 +38,7 @@ TARGET_KERNEL_CONFIG := cyanogenmod_m7_defconfig
 TARGET_KERNEL_SOURCE := kernel/htc/m7
 
 #Tune for cortex-a15
-TARGET_EXTRA_CFLAGS := -mtune=cortex-a15 -mcpu=cortex-a9
+TARGET_EXTRA_CFLAGS := -mcpu=cortex-a15 -mtune=cortex-a15 -mfpu=neon-vfpv4
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_SMP := true

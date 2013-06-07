@@ -45,4 +45,12 @@
     <string name="buttonlightnotif_switch_title_head">Enable</string>
     <string name="buttonlightnotif_switch_summary_head">Enables the Home and Back button leds to flash when notification led is blinking.</string>
 
+    <!-- Sensors Preference -->
+    <string name="category_sensors_title">Sensors</string>
+
+    <!-- Proximity Calibration -->
+    <string name="proximity_subcat_title">Proximity</string>
+    <string name="proximity_calibration_title">Calibration</string>
+    <string name="proximity_calibration_summary">Set the calibration value. Higher values mean less sensitivity.</string>
+
 </resources>

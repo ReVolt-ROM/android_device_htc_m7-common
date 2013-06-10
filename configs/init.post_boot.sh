@@ -47,15 +47,28 @@ case "$target" in
         # echo 1 > /sys/module/pm_8x60/modes/cpu2/standalone_power_collapse/idle_enabled
         # echo 1 > /sys/module/pm_8x60/modes/cpu3/standalone_power_collapse/idle_enabled
         # echo 1 > /sys/module/pm_8x60/modes/cpu0/power_collapse/idle_enabled
-        echo 90 > /sys/devices/system/cpu/cpufreq/ondemand/up_threshold
+        #cputweaks
+        chmod 664 /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+        echo "ondemand" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+        chmod 444 /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+        chmod 664 /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor
+        echo "ondemand" > /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor
+        chmod 444 /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor
+        chmod 664 /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor
+        echo "ondemand" > /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor
+        chmod 444 /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor
+        chmod 664 /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor
+        echo "ondemand" > /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor
+        chmod 444 /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor
+        echo 75 > /sys/devices/system/cpu/cpufreq/ondemand/up_threshold
         echo 50000 > /sys/devices/system/cpu/cpufreq/ondemand/sampling_rate
         echo 1 > /sys/devices/system/cpu/cpufreq/ondemand/io_is_busy
         echo 4 > /sys/devices/system/cpu/cpufreq/ondemand/sampling_down_factor
         echo 10 > /sys/devices/system/cpu/cpufreq/ondemand/down_differential
         echo 70 > /sys/devices/system/cpu/cpufreq/ondemand/up_threshold_multi_core
         echo 3 > /sys/devices/system/cpu/cpufreq/ondemand/down_differential_multi_core
-        echo 918000 > /sys/devices/system/cpu/cpufreq/ondemand/optimal_freq
-        echo 918000 > /sys/devices/system/cpu/cpufreq/ondemand/sync_freq
+        echo 1296000 > /sys/devices/system/cpu/cpufreq/ondemand/optimal_freq
+        echo 756000 > /sys/devices/system/cpu/cpufreq/ondemand/sync_freq
         echo 80 > /sys/devices/system/cpu/cpufreq/ondemand/up_threshold_any_cpu_load
         echo 384000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
         echo 384000 > /sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq
@@ -81,6 +94,24 @@ case "$target" in
         chmod 664 /sys/devices/system/cpu/cpu1/online
         chmod 664 /sys/devices/system/cpu/cpu2/online
         chmod 664 /sys/devices/system/cpu/cpu3/online
+        chmod 664 /sys/devices/system/cpu/cpufreq/ondemand/ui_sampling_rate
+        chmod 664 /sys/devices/system/cpu/cpufreq/ondemand/optimal_freq
+        chmod 664 /sys/devices/system/cpu/cpufreq/ondemand/up_threshold
+        chmod 664 /sys/devices/system/cpu/cpufreq/ondemand/sync_freq
+        #fastcharge
+        chmod 664 /sys/kernel/fast_charge/force_fast_charge
+        echo "0" > /sys/kernel/fast_charge/force_fast_charge
+        #sd card cache size
+        chmod 664 /sys/block/mmcblk0/queue/read_ahead_kb
+        chmod 644 /sys/devices/virtual/bdi/179:0/read_ahead_kb
+        echo "2048" > /sys/block/mmcblk0/queue/read_ahead_kb
+        echo "2048" > /sys/devices/virtual/bdi/179:0/read_ahead_kb
+        #IO scheduler
+        chmod 664 /sys/block/mmcblk0/queue/scheduler
+        chmod 664 /sys/block/mmcblk1/queue/scheduler
+        echo "fiops" > /sys/block/mmcblk0/queue/scheduler
+        echo "fiops" > /sys/block/mmcblk1/queue/scheduler
+        #Power
         chmod 664 /sys/power/pnpmgr/apps/media_mode
         chown media.system /sys/power/pnpmgr/apps/media_mode
         chown system /sys/power/pnpmgr/apps/activity_trigger

@@ -51,14 +51,12 @@ ARCH_ARM_HAVE_TLS_REGISTER := true
 #TARGET_GCC_VERSION := 4.6
 
 # Flags
-COMMON_GLOBAL_CFLAGS += -DNEW_ION_API=1
 COMMON_GLOBAL_CFLAGS += -DNEW_LIBRIL_HTC
 
 # Audio
 BOARD_USES_FLUENCE_INCALL := true  # use DMIC in call only
 BOARD_USES_SEPERATED_AUDIO_INPUT := true  # use distinct voice recog/camcorder use cases
 BOARD_USES_SEPERATED_VOICE_SPEAKER := true  # use distinct voice speaker use case
-TARGET_USES_QCOM_COMPRESSED_AUDIO := true
 BOARD_HAVE_HTC_CSDCLIENT := true
 
 # Bluetooth

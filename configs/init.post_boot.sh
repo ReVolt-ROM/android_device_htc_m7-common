@@ -70,11 +70,11 @@ case "$target" in
         echo 1296000 > /sys/devices/system/cpu/cpufreq/ondemand/optimal_freq
         echo 756000 > /sys/devices/system/cpu/cpufreq/ondemand/sync_freq
         echo 80 > /sys/devices/system/cpu/cpufreq/ondemand/up_threshold_any_cpu_load
-        echo 384000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
-        echo 384000 > /sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq
-        echo 384000 > /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq
-        echo 384000 > /sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq
-	echo 4096 > /proc/sys/vm/min_free_kbytes
+        echo 192000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
+        echo 192000 > /sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq
+        echo 192000 > /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq
+        echo 192000 > /sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq
+	echo 2048 > /proc/sys/vm/min_free_kbytes
 	echo "16 16" > /proc/sys/vm/lowmem_reserve_ratio
         chown system /sys/devices/system/cpu/cpufreq/ondemand/io_is_busy
         chown system /sys/devices/system/cpu/cpufreq/ondemand/sampling_rate

@@ -61,10 +61,10 @@ BOARD_AUDIO_AMPLIFIER := device/htc/m7-common/libaudioamp
 BOARD_HAVE_HTC_CSDCLIENT := true
 
 # Bluetooth
-BOARD_HAVE_BLUETOOTH_BCM := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/m7-common/bluetooth
-BOARD_BLUEDROID_VENDOR_CONF := device/htc/m7-common/bluetooth/libbt_vndcfg.txt
-BOARD_BLUETOOTH_USES_HCIATTACH_PROPERTY := false
+BOARD_HAVE_BLUETOOTH := true
+BOARD_HAVE_BLUETOOTH_BLUEZ := true
+SUPER_LINE := true
+BOARD_HAVE_BLUETOOTH_BRCM := true
 
 # Camera
 USE_CAMERA_STUB := false

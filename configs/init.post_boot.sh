@@ -126,10 +126,3 @@ case "$target" in
 	chown radio.radio /sys/devices/virtual/hsicctl/hsicctl0/modem_wait
     ;;
 esac
-
-# Post-setup services
-case "$target" in
-    "msm8960")
-	start adaptive
-    ;;
-esac

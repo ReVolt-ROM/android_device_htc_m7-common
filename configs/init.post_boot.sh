@@ -60,15 +60,15 @@ case "$target" in
         chmod 664 /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor
         echo "ondemand" > /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor
         chmod 444 /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor
-        echo 75 > /sys/devices/system/cpu/cpufreq/ondemand/up_threshold
-        echo 50000 > /sys/devices/system/cpu/cpufreq/ondemand/sampling_rate
+        echo 90 > /sys/devices/system/cpu/cpufreq/ondemand/up_threshold
+        echo 30000 > /sys/devices/system/cpu/cpufreq/ondemand/sampling_rate
         echo 1 > /sys/devices/system/cpu/cpufreq/ondemand/io_is_busy
-        echo 4 > /sys/devices/system/cpu/cpufreq/ondemand/sampling_down_factor
-        echo 10 > /sys/devices/system/cpu/cpufreq/ondemand/down_differential
-        echo 70 > /sys/devices/system/cpu/cpufreq/ondemand/up_threshold_multi_core
-        echo 3 > /sys/devices/system/cpu/cpufreq/ondemand/down_differential_multi_core
-        echo 1296000 > /sys/devices/system/cpu/cpufreq/ondemand/optimal_freq
-        echo 756000 > /sys/devices/system/cpu/cpufreq/ondemand/sync_freq
+        echo 3 > /sys/devices/system/cpu/cpufreq/ondemand/sampling_down_factor
+        echo 5 > /sys/devices/system/cpu/cpufreq/ondemand/down_differential
+        echo 95 > /sys/devices/system/cpu/cpufreq/ondemand/up_threshold_multi_core
+        echo 2 > /sys/devices/system/cpu/cpufreq/ondemand/down_differential_multi_core
+        echo 918000 > /sys/devices/system/cpu/cpufreq/ondemand/optimal_freq
+        echo 1026000 > /sys/devices/system/cpu/cpufreq/ondemand/sync_freq
         echo 80 > /sys/devices/system/cpu/cpufreq/ondemand/up_threshold_any_cpu_load
         echo 192000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
         echo 192000 > /sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq
@@ -100,7 +100,7 @@ case "$target" in
         chmod 664 /sys/devices/system/cpu/cpufreq/ondemand/sync_freq
         #fastcharge
         chmod 664 /sys/kernel/fast_charge/force_fast_charge
-        echo "0" > /sys/kernel/fast_charge/force_fast_charge
+        echo "1" > /sys/kernel/fast_charge/force_fast_charge
         #sd card cache size
         chmod 664 /sys/block/mmcblk0/queue/read_ahead_kb
         chmod 644 /sys/devices/virtual/bdi/179:0/read_ahead_kb

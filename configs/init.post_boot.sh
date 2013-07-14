@@ -67,13 +67,13 @@ case "$target" in
         echo 5 > /sys/devices/system/cpu/cpufreq/ondemand/down_differential
         echo 95 > /sys/devices/system/cpu/cpufreq/ondemand/up_threshold_multi_core
         echo 2 > /sys/devices/system/cpu/cpufreq/ondemand/down_differential_multi_core
-        echo 918000 > /sys/devices/system/cpu/cpufreq/ondemand/optimal_freq
-        echo 1026000 > /sys/devices/system/cpu/cpufreq/ondemand/sync_freq
+        echo 1026000 > /sys/devices/system/cpu/cpufreq/ondemand/optimal_freq
+        echo 756000 > /sys/devices/system/cpu/cpufreq/ondemand/sync_freq
         echo 80 > /sys/devices/system/cpu/cpufreq/ondemand/up_threshold_any_cpu_load
-        echo 192000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
-        echo 192000 > /sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq
-        echo 192000 > /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq
-        echo 192000 > /sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq
+        echo 48000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
+        echo 48000 > /sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq
+        echo 48000 > /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq
+        echo 48000 > /sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq
 	echo 2048 > /proc/sys/vm/min_free_kbytes
 	echo "16 16" > /proc/sys/vm/lowmem_reserve_ratio
         chown system /sys/devices/system/cpu/cpufreq/ondemand/io_is_busy

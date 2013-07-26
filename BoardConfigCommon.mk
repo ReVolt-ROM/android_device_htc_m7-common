@@ -42,6 +42,7 @@ TARGET_EXTRA_CFLAGS := -mcpu=cortex-a15 -mtune=cortex-a15 -mfpu=neon-vfpv4
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_SMP := true
+TARGET_CPU_VARIANT := krait
 TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
 ARCH_ARM_HAVE_TLS_REGISTER := true
@@ -116,8 +117,6 @@ BOARD_CUSTOM_GRAPHICS := ../../../device/htc/m7-common/recovery/graphics.c
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
 BOARD_HAS_NO_SELECT_BUTTON := true
 TARGET_USERIMAGES_USE_EXT4 := true
-
-TARGET_CPU_VARIANT := krait
 
 # inherit from the proprietary version
 -include vendor/htc/m7-common/BoardConfigVendor.mk

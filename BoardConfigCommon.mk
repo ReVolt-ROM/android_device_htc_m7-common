@@ -46,9 +46,9 @@ TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
 ARCH_ARM_HAVE_TLS_REGISTER := true
 
-#4.6
-#TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.6/bin/arm-eabi-
-#TARGET_GCC_VERSION := 4.6
+#4.7
+#TARGET_KERNEL_CUSTOM_TOOLCHAIN := ../../../prebuilts/gcc/linux-x86/arm/arm-eabi-4.7/
+#TARGET_GCC_VERSION := 4.7
 
 # Flags
 COMMON_GLOBAL_CFLAGS += -DNEW_LIBRIL_HTC

@@ -278,7 +278,6 @@ on boot
     chown media_rw media_rw /data/media
 
     setprop ro.crypto.fuse_sdcard true
-    setprop ro.build.selinux true
 
     # Give system access to wpa_supplicant.conf for backup and restore
     mkdir /data/misc/wifi/sockets 0771 wifi wifi

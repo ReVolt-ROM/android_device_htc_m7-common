@@ -160,8 +160,7 @@ PRODUCT_PACKAGES += \
     htcirlibs \
     cir \
     cir_fw_update \
-    libhtcirinterface_jni \
-    init.rc
+    libhtcirinterface_jni
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config=mtp,adb

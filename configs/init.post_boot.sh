@@ -50,16 +50,13 @@ case "$target" in
         #cputweaks
         chmod 664 /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
         echo "ondemand" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
-        chmod 444 /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
         chmod 664 /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor
         echo "ondemand" > /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor
-        chmod 444 /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor
         chmod 664 /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor
         echo "ondemand" > /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor
-        chmod 444 /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor
         chmod 664 /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor
         echo "ondemand" > /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor
-        chmod 444 /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor
+        echo 1 > /dev/cpuctl/apps/cpu.notify_on_migrate 
         echo 90 > /sys/devices/system/cpu/cpufreq/ondemand/up_threshold
         echo 30000 > /sys/devices/system/cpu/cpufreq/ondemand/sampling_rate
         echo 1 > /sys/devices/system/cpu/cpufreq/ondemand/io_is_busy
@@ -74,8 +71,8 @@ case "$target" in
         echo 48000 > /sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq
         echo 48000 > /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq
         echo 48000 > /sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq
-	echo 2048 > /proc/sys/vm/min_free_kbytes
-	echo "16 16" > /proc/sys/vm/lowmem_reserve_ratio
+	    echo 2048 > /proc/sys/vm/min_free_kbytes
+	    echo "16 16" > /proc/sys/vm/lowmem_reserve_ratio
         chown system /sys/devices/system/cpu/cpufreq/ondemand/io_is_busy
         chown system /sys/devices/system/cpu/cpufreq/ondemand/sampling_rate
         chown system /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
